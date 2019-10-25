@@ -1,0 +1,6 @@
+Day      ,Tatilness,Class day,Meeting day,Presence
+Saturday ,0        ,TRUE     ,FASLE      ,?
+Sunday   ,0        ,FASLE    ,FASLE      ,?
+Monday   ,0        ,TRUE     ,FASLE      ,?
+Tuesday  ,0        ,FASLE    ,FASLE      ,?
+Wednesday,0        ,FASLE    ,TRUE       ,?

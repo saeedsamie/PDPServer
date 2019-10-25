@@ -1,0 +1,99 @@
+Day      ,Tatilness,Class day,Meeting day,Presence
+Saturday ,0        ,TRUE     ,FASLE      ,TRUE
+Sunday   ,0        ,FASLE    ,FASLE      ,FASLE
+Monday   ,0        ,TRUE     ,FASLE      ,TRUE
+Tuesday  ,0        ,FASLE    ,FASLE      ,FASLE
+Wednesday,2        ,FASLE    ,TRUE       ,FASLE
+Thursday ,2        ,FASLE    ,FASLE      ,FASLE
+Friday   ,2        ,FASLE    ,FASLE      ,FASLE
+Saturday ,0        ,TRUE     ,FASLE      ,TRUE
+Sunday   ,0        ,FASLE    ,FASLE      ,TRUE
+Monday   ,0        ,TRUE     ,FASLE      ,TRUE
+Tuesday  ,0        ,FASLE    ,FASLE      ,TRUE
+Wednesday,0        ,TRUE     ,TRUE       ,TRUE
+Thursday ,2        ,FASLE    ,FASLE      ,FASLE
+Friday   ,2        ,FASLE    ,FASLE      ,FASLE
+Saturday ,0        ,TRUE     ,FASLE      ,TRUE
+Sunday   ,0        ,FASLE    ,FASLE      ,TRUE
+Monday   ,0        ,TRUE     ,FASLE      ,TRUE
+Tuesday  ,0        ,FASLE    ,FASLE      ,TRUE
+Wednesday,0        ,TRUE     ,TRUE       ,TRUE
+Thursday ,2        ,FASLE    ,FASLE      ,FASLE
+Friday   ,2        ,FASLE    ,FASLE      ,FASLE
+Saturday ,0        ,TRUE     ,FASLE      ,TRUE
+Sunday   ,0        ,FASLE    ,FASLE      ,TRUE
+Monday   ,0        ,TRUE     ,FASLE      ,TRUE
+Tuesday  ,0        ,FASLE    ,FASLE      ,TRUE
+Wednesday,0        ,TRUE     ,TRUE       ,TRUE
+Thursday ,2        ,FASLE    ,FASLE      ,FASLE
+Friday   ,2        ,FASLE    ,FASLE      ,FASLE
+Saturday ,0        ,TRUE     ,FASLE      ,TRUE
+Sunday   ,0        ,FASLE    ,FASLE      ,TRUE
+Monday   ,0        ,TRUE     ,FASLE      ,TRUE
+Tuesday  ,0        ,FASLE    ,FASLE      ,TRUE
+Wednesday,0        ,TRUE     ,TRUE       ,TRUE
+Thursday ,2        ,FASLE    ,FASLE      ,FASLE
+Friday   ,2        ,FASLE    ,FASLE      ,FASLE
+Saturday ,0        ,TRUE     ,FASLE      ,TRUE
+Sunday   ,0        ,FASLE    ,FASLE      ,TRUE
+Monday   ,0        ,TRUE     ,FASLE      ,TRUE
+Tuesday  ,0        ,FASLE    ,FASLE      ,TRUE
+Wednesday,0        ,TRUE     ,TRUE       ,TRUE
+Thursday ,2        ,FASLE    ,FASLE      ,FASLE
+Friday   ,2        ,FASLE    ,FASLE      ,FASLE
+Saturday ,0        ,TRUE     ,FASLE      ,TRUE
+Sunday   ,0        ,FASLE    ,FASLE      ,FASLE
+Monday   ,0        ,TRUE     ,FASLE      ,TRUE
+Tuesday  ,2        ,FASLE    ,FASLE      ,FASLE
+Wednesday,1        ,FASLE    ,TRUE       ,TRUE
+Thursday ,2        ,FASLE    ,FASLE      ,FASLE
+Friday   ,2        ,FASLE    ,FASLE      ,FASLE
+Saturday ,0        ,TRUE     ,FASLE      ,TRUE
+Sunday   ,0        ,FASLE    ,FASLE      ,TRUE
+Monday   ,0        ,TRUE     ,FASLE      ,TRUE
+Tuesday  ,0        ,FASLE    ,FASLE      ,TRUE
+Wednesday,2        ,FASLE    ,TRUE       ,FASLE
+Thursday ,2        ,FASLE    ,FASLE      ,FASLE
+Friday   ,2        ,FASLE    ,FASLE      ,FASLE
+Saturday ,0        ,TRUE     ,FASLE      ,TRUE
+Sunday   ,0        ,FASLE    ,FASLE      ,FASLE
+Monday   ,0        ,TRUE     ,FASLE      ,TRUE
+Tuesday  ,0        ,FASLE    ,FASLE      ,FASLE
+Wednesday,0        ,TRUE     ,TRUE       ,TRUE
+Thursday ,2        ,FASLE    ,FASLE      ,FASLE
+Friday   ,2        ,FASLE    ,FASLE      ,FASLE
+Saturday ,0        ,TRUE     ,FASLE      ,TRUE
+Sunday   ,0        ,FASLE    ,FASLE      ,TRUE
+Monday   ,0        ,TRUE     ,FASLE      ,TRUE
+Tuesday  ,0        ,FASLE    ,FASLE      ,FASLE
+Wednesday,0        ,TRUE     ,TRUE       ,TRUE
+Thursday ,2        ,FASLE    ,FASLE      ,FASLE
+Friday   ,2        ,FASLE    ,FASLE      ,FASLE
+Saturday ,1        ,FASLE    ,FASLE      ,TRUE
+Sunday   ,2        ,FASLE    ,FASLE      ,FASLE
+Monday   ,0        ,TRUE     ,FASLE      ,TRUE
+Tuesday  ,0        ,FASLE    ,FASLE      ,FASLE
+Wednesday,0        ,TRUE     ,TRUE       ,TRUE
+Thursday ,2        ,FASLE    ,FASLE      ,FASLE
+Friday   ,2        ,FASLE    ,FASLE      ,FASLE
+Saturday ,0        ,TRUE     ,FASLE      ,TRUE
+Sunday   ,0        ,FASLE    ,FASLE      ,TRUE
+Monday   ,0        ,TRUE     ,FASLE      ,TRUE
+Tuesday  ,0        ,FASLE    ,FASLE      ,FASLE
+Wednesday,0        ,TRUE     ,TRUE       ,TRUE
+Thursday ,2        ,FASLE    ,FASLE      ,FASLE
+Friday   ,2        ,FASLE    ,FASLE      ,FASLE
+Saturday ,0        ,TRUE     ,FASLE      ,TRUE
+Sunday   ,0        ,FASLE    ,FASLE      ,TRUE
+Monday   ,0        ,TRUE     ,FASLE      ,TRUE
+Tuesday  ,0        ,FASLE    ,FASLE      ,TRUE
+Wednesday,0        ,TRUE     ,TRUE       ,TRUE
+Thursday ,2        ,FASLE    ,FASLE      ,FASLE
+Friday   ,2        ,FASLE    ,FASLE      ,FASLE
+Saturday ,0        ,TRUE     ,FASLE      ,TRUE
+Sunday   ,0        ,FASLE    ,FASLE      ,FASLE
+Monday   ,0        ,TRUE     ,FASLE      ,TRUE
+Tuesday  ,0        ,FASLE    ,FASLE      ,FASLE
+Wednesday,0        ,TRUE     ,TRUE       ,TRUE
+Thursday ,2        ,FASLE    ,FASLE      ,FASLE
+Friday   ,2        ,FASLE    ,FASLE      ,FASLE
