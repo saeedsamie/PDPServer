@@ -1,5 +1,6 @@
 package ML;
 
+import IO.CSVHandler;
 import weka.classifiers.Evaluation;
 import weka.classifiers.trees.RandomTree;
 import weka.core.Instances;
@@ -16,11 +17,9 @@ public class RandomTreeClassifier implements MyClassifier {
 
     public void train(String fileName) {
         final Evaluation eval;
+
         try {
-            CSVLoader loader = new CSVLoader();
-            loader.setSource(new File("C:\\Users\\Saeed\\Documents\\Graduation Final Project\\Presence_Detection_Prediction\\" + fileName));
-//            loader.
-            Instances trainingSet = loader.getDataSet();
+            Instances trainingSet = CSVHandler.read(fileName);
             if (trainingSet.classIndex() == -1) {
                 trainingSet.setClassIndex(trainingSet.numAttributes() - 1);
             }

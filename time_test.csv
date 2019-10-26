@@ -1,6 +1,6 @@
-Day      ,Tatilness,Class day,Meeting_Day,class_time_1,class_time_2,class_time_3,class_time_4,class_time_5,7,7:30,8,8:30,9,9:30,10,10:30,11,11:30,12,12:30,13,13:30,14,14:30,15,15:30,16,16:30,17,17:30,18,18:30,19
-Saturday ,0,TRUE     ,FALSE      ,FALSE       ,TRUE        ,FALSE       ,TRUE        ,TRUE        ,,,,,,,,,,,,,,,,,,,,,,,,,
-Sunday   ,0,FALSE    ,FALSE      ,FALSE       ,FALSE       ,FALSE       ,FALSE       ,FALSE       ,,,,,,,,,,,,,,,,,,,,,,,,,
-Monday   ,0,TRUE     ,FALSE      ,FALSE       ,TRUE        ,FALSE       ,TRUE        ,TRUE        ,,,,,,,,,,,,,,,,,,,,,,,,,
-Tuesday  ,0,FALSE    ,FALSE      ,FALSE       ,FALSE       ,FALSE       ,FALSE       ,FALSE       ,,,,,,,,,,,,,,,,,,,,,,,,,
-Wednesday,0,TRUE     ,TRUE       ,FALSE       ,TRUE        ,FALSE       ,FALSE       ,FALSE       ,,,,,,,,,,,,,,,,,,,,,,,,,
+Day,Tatilness,Class day,Meeting_Day,class_time_1,class_time_2,class_time_3,class_time_4,class_time_5,7,7:30,8,8:30,9,9:30,10,10:30,11,11:30,12,12:30,13,13:30,14,14:30,15,15:30,16,16:30,17,17:30,18,18:30,19
+Saturday,0,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,,,,,
+Sunday,0,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,,,,,,,,,,,,,,,,,,,
+Monday,0,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,,,,,
+Tuesday,0,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,,,,,,,,,,,,,,,,,,,
+Wednesday,0,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,,,,,,,,,,,,,,,,,,,,,,,,,
