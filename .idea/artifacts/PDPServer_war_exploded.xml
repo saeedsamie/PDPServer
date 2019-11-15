@@ -1,11 +1,19 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="PDPServer:war exploded">
-    <output-path>$PROJECT_DIR$/classes/artifacts/PDPServer_war_exploded</output-path>
+    <output-path>$PROJECT_DIR$/target/RESTfulExample</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>PDPServer</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="PDPServer" />
         </element>
+        <element id="module-output" name="PDPServer" />
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.jboss.resteasy:resteasy-jaxrs:2.2.1.GA" />
           <element id="library" level="project" name="Maven: org.jboss.resteasy:jaxrs-api:2.2.1.GA" />
@@ -24,10 +32,10 @@
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.6.3" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-jaxrs:1.6.3" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-xc:1.6.3" />
-          <element id="library" level="project" name="weka" />
-          <element id="library" level="project" name="Maven: junit:junit:4.8.2" />
         </element>
-        <element id="module-output" name="PDPServer" />
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/RESTfulExample/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="PDPServer/web/Web" />
     </root>

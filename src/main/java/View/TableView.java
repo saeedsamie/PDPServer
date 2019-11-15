@@ -1,35 +1,35 @@
 package View;
 
-import ML.NaiveBayesClassifier;
 import ML.RandomTreeClassifier;
 import weka.core.Instances;
 
 public class TableView {
-    NaiveBayesClassifier timeClassifierModel;
+    RandomTreeClassifier timeClassifierModel;
     RandomTreeClassifier randomTreeDayClassifier;
 
 
+
     public TableView() {
-        timeClassifierModel = new NaiveBayesClassifier();
+        timeClassifierModel = new RandomTreeClassifier(48);
         timeClassifierModel.train("time_train.csv");
-        randomTreeDayClassifier = new RandomTreeClassifier();
+        randomTreeDayClassifier = new RandomTreeClassifier(1);
         randomTreeDayClassifier.train("day_train.csv");
     }
 
-    public NaiveBayesClassifier getTimeClassifierModel() {
-        return timeClassifierModel;
-    }
-
-    public RandomTreeClassifier getRandomTreeDayClassifier() {
-        return randomTreeDayClassifier;
-    }
+//    public NaiveBayesClassifier getTimeClassifierModel() {
+//        return timeClassifierModel;
+//    }
+//
+//    public RandomTreeClassifier getRandomTreeDayClassifier() {
+//        return randomTreeDayClassifier;
+//    }
 
     public Instances getTimeData() {
-        return timeClassifierModel.predict("time_test.csv", 25);
+        return timeClassifierModel.predict("time_test.csv");
     }
 
     public Instances getDayData() {
-        return randomTreeDayClassifier.predict("day_test.csv", 1);
+        return randomTreeDayClassifier.predict("day_test.csv");
     }
 
 }

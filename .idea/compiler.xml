@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="PDPServer" />
         <module name="RESTfulExample" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="PDPServer" target="1.8" />
       <module name="RESTfulExample" target="1.6" />
     </bytecodeTargetLevel>
   </component>

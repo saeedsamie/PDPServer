@@ -2,31 +2,33 @@ package REST;
 
 import IO.CSVHandler;
 
-import javax.ws.rs.*;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
-@Path("/json")
+@Path("/rest")
 public class JSONService {
-
-    @GET
-    @Path("/get")
-    @Produces("application/json")
-    public jsonData getProductInJSON() {
-
-        jsonData jsonData = new jsonData();
-//		jsonData.se("iPad 3");
-//		jsonData.setQty(999);
-
-        return jsonData;
-
-    }
+//    @GET
+//    @Path("/get/time")
+//    @Produces("application/json")
+//    public Response getTime() {
+//        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+//        LocalDateTime now = LocalDateTime.now();
+//        System.out.println(dtf.format(now));
+//        JSONObject json = new JSONObject();
+//        json.put("time", dtf.format(now));
+//        System.out.println(json.toString());
+////        json.put("name", "student");
+//        return Response.status(201).entity(json.toMap()).build();
+//    }
 
     @POST
     @Path("/post")
     @Consumes("application/json")
     public Response createProductInJSON(jsonData jsonData) {
 
-        String result = "jsonData created : " + jsonData.getDay() + " - " + jsonData.getDate() + " - " + jsonData.getPeriod() + " - " + jsonData.getStart_time() + " - " + jsonData.isPresence();
+        String result = "jsonData created : " + jsonData.getDay()  + " - " + jsonData.getStart_time() + " - " + jsonData.isPresence();
         System.out.println(result);
         if (jsonData.getStart_time().equals("7")) {
             CSVHandler.time_write("time_train.csv", "\n" + jsonData.getDay());

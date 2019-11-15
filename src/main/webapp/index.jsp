@@ -22,15 +22,15 @@
     <tr>
         <td> -
         </td>
-        <% for (int i = 0; i < 25; i++) { %>
-        <td BGCOLOR=<%="E3228A"%>><%=7 + i * 0.5%>
+        <% for (int i = 0; i < 48; i++) { %>
+        <td BGCOLOR=<%="E3228A"%>><%= i/4+7%>:<%=(i%4)*15 %>
         </td>
         <%}%>
     </tr>
     </thead>
     <tbody>
-    <% Instances timeData = tableView.getTimeData();
-        for (int i = 0; i < timeData.numInstances(); i++) { %>
+    <%  tableView.getTimeData();
+        for (int i = 0; i < 5; i++) { %>
     <tr>
         <% DecimalFormat decimalFormat = new DecimalFormat("#.0");
             double value = 0;
@@ -48,12 +48,12 @@
         %>
         <td BGCOLOR=<%=bgColor%>>
             <% if (i != 0) {%><%=i%><%}%>shanbe
-            <%=value%>%
+            <%=value%>
         </td>
-        <% for (int j = 9; j < 34; j++) {
+        <% for (int j = 9; j < 57; j++) {
             double rate = 0;
             try {
-                rate = Double.valueOf(decimalFormat.format(100 * timeData.instance(i).value(j)));
+                rate = Double.valueOf(decimalFormat.format(100 * tableView.getTimeData().instance(i).value(j)));
             } catch (NumberFormatException e) {
                 e.printStackTrace();
             }
