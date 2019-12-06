@@ -13,7 +13,6 @@
 <html>
 <body>
 <% TableView tableView = new TableView(); %>
-
 <table width="90%" border="1"
        align="center"
        cellpadding="2">
@@ -23,13 +22,13 @@
         <td> -
         </td>
         <% for (int i = 0; i < 48; i++) { %>
-        <td BGCOLOR=<%="E3228A"%>><%= i/4+7%>:<%=(i%4)*15 %>
+        <td BGCOLOR=<%="E3228A"%>><%= i / 4 + 7%>:<%=(i % 4) * 15 %>
         </td>
         <%}%>
     </tr>
     </thead>
     <tbody>
-    <%  tableView.getTimeData();
+    <% tableView.getTimeData();
         for (int i = 0; i < 5; i++) { %>
     <tr>
         <% DecimalFormat decimalFormat = new DecimalFormat("#.0");
@@ -77,15 +76,15 @@
     </tr>
     <%}%>
     </tbody>
+
 </table>
 <br>
+<tr>
+    reports:
+    <br>
+    <% String report = tableView.report();%>
 
-<%--<% String[] tree = tableView.getTimeClassifierModel().getTree().toString().split("[\n]");--%>
-<%--for (int i = 0; i < tree.length; i++) { %>--%>
-<%--<br>--%>
-<%--<%=tree[i]%>--%>
-<%--<%}%>--%>
-<%--<br>k value :--%>
-<%--<%=tableView.getRandomTreeTimeClassifier().getTree().getKValue()%>--%>
+    <%=report%>
+</tr>
 </body>
 </html>

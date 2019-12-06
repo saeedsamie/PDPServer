@@ -1,12 +1,12 @@
 package View;
 
+import IO.ReportHandler;
 import ML.RandomTreeClassifier;
 import weka.core.Instances;
 
 public class TableView {
     RandomTreeClassifier timeClassifierModel;
     RandomTreeClassifier randomTreeDayClassifier;
-
 
 
     public TableView() {
@@ -32,4 +32,7 @@ public class TableView {
         return randomTreeDayClassifier.predict("day_test.csv");
     }
 
+    public String report() {
+        return new ReportHandler().read();
+    }
 }

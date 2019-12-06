@@ -1,6 +1,7 @@
 package REST;
 
 import IO.CSVHandler;
+import IO.ReportHandler;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
@@ -28,7 +29,8 @@ public class JSONService {
     @Consumes("application/json")
     public Response createProductInJSON(jsonData jsonData) {
 
-        String result = "jsonData created : " + jsonData.getDay()  + " - " + jsonData.getStart_time() + " - " + jsonData.isPresence();
+        String result = "jsonData created : " + jsonData.getDay()    + " - " + jsonData.getStart_time() + " - " + jsonData.isPresence();
+        new ReportHandler().write(result);
         System.out.println(result);
         if (jsonData.getStart_time().equals("7")) {
             CSVHandler.time_write("time_train.csv", "\n" + jsonData.getDay());
