@@ -12,7 +12,7 @@ public class ReportHandler {
     public static void write(String dataIn) {
 
         try {
-            FileWriter fileWriter = new FileWriter("C:\\Users\\Saeed\\Documents\\Graduation Final Project\\PDPServer\\" + fileName, true);
+            FileWriter fileWriter = new FileWriter(fileName, true);
             Timestamp timestamp = new Timestamp(System.currentTimeMillis());
             fileWriter.append(String.valueOf(timestamp)).append(" : ").append(dataIn).append("<br>");
             fileWriter.flush();
@@ -22,16 +22,19 @@ public class ReportHandler {
         }
     }
 
-    private static String readFileAsString(String fileName) throws Exception {
+    private static String readFileAsString(String fileName) {
         String data = "";
-        data = new String(Files.readAllBytes(Paths.get(fileName)));
+        try {
+            data = new String(Files.readAllBytes(Paths.get(fileName)));
+        } catch (IOException ignored) {
+        }
         return data;
     }
 
     public static String read() {
         String data = "";
         try {
-            data = readFileAsString("C:\\Users\\Saeed\\Documents\\Graduation Final Project\\PDPServer\\" + fileName);
+            data = readFileAsString(fileName);
         } catch (Exception e) {
             e.printStackTrace();
         }

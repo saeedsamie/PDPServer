@@ -29,11 +29,11 @@ public class JSONService {
     @Consumes("application/json")
     public Response createProductInJSON(jsonData jsonData) {
 
-        String result = "jsonData created : " + jsonData.getDay()    + " - " + jsonData.getStart_time() + " - " + jsonData.isPresence();
-        new ReportHandler().write(result);
+        String result = "jsonData created : " + jsonData.getDay() + " - " + jsonData.getStart_time() + " - " + jsonData.isPresence();
+        ReportHandler.write(result);
         System.out.println(result);
         if (jsonData.getStart_time().equals("7")) {
-            CSVHandler.time_write("time_train.csv", "\n" + jsonData.getDay());
+            CSVHandler.time_write("time_train.csv", jsonData.getDay());
             switch (jsonData.getDay()) {
                 case "Saturday":
                     CSVHandler.time_write("time_train.csv", ",0,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE");
@@ -50,7 +50,6 @@ public class JSONService {
                 case "Wednesday":
                     CSVHandler.time_write("time_train.csv", ",0,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE");
                     break;
-
             }
         }
         CSVHandler.time_write("time_train.csv", "," + String.valueOf(jsonData.isPresence()));

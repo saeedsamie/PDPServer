@@ -1,5 +1,6 @@
 package View;
 
+import IO.CSVHandler;
 import IO.ReportHandler;
 import ML.RandomTreeClassifier;
 import weka.core.Instances;
@@ -14,6 +15,8 @@ public class TableView {
         timeClassifierModel.train("time_train.csv");
         randomTreeDayClassifier = new RandomTreeClassifier(1);
         randomTreeDayClassifier.train("day_train.csv");
+        CSVHandler.createDayTestCSV();
+        CSVHandler.createTimeTestCSV();
     }
 
 //    public NaiveBayesClassifier getTimeClassifierModel() {
@@ -25,11 +28,11 @@ public class TableView {
 //    }
 
     public Instances getTimeData() {
-        return timeClassifierModel.predict("time_test.csv");
+        return timeClassifierModel.predictTime("time_test.csv");
     }
 
     public Instances getDayData() {
-        return randomTreeDayClassifier.predict("day_test.csv");
+        return randomTreeDayClassifier.predictDay("day_test.csv");
     }
 
     public String report() {

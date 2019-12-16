@@ -12,7 +12,8 @@
 
 <html>
 <body>
-<% TableView tableView = new TableView(); %>
+<% TableView tableView = new TableView();
+%>
 <table width="90%" border="1"
        align="center"
        cellpadding="2">
@@ -34,8 +35,13 @@
         <% DecimalFormat decimalFormat = new DecimalFormat("#.0");
             double value = 0;
             try {
-                value = Double.valueOf(decimalFormat.format(100 * tableView.getDayData().instance(i).value(tableView.getDayData().numAttributes() - 1)));
-            } catch (NumberFormatException e) {
+                Instances dayInstance = tableView.getDayData();
+                if (dayInstance != null) {
+                    double instanceValue = dayInstance.instance(i).value(tableView.getDayData().numAttributes() - 1);
+                    if (!Double.valueOf(decimalFormat.format(100 * instanceValue)).toString().equals("NaN"))
+                        value = Double.valueOf(decimalFormat.format(100 * instanceValue));
+                }
+            } catch (Exception e) {
                 e.printStackTrace();
             }
             String bgColor;
@@ -52,8 +58,13 @@
         <% for (int j = 9; j < 57; j++) {
             double rate = 0;
             try {
-                rate = Double.valueOf(decimalFormat.format(100 * tableView.getTimeData().instance(i).value(j)));
-            } catch (NumberFormatException e) {
+                Instances timeInstance = tableView.getTimeData();
+                if (timeInstance != null) {
+                    double instanceValue = timeInstance.instance(i).value(j);
+                    if (!Double.valueOf(decimalFormat.format(100 * instanceValue)).toString().equals("NaN"))
+                        rate = Double.valueOf(decimalFormat.format(100 * instanceValue));
+                }
+            } catch (Exception e) {
                 e.printStackTrace();
             }
             String color;
