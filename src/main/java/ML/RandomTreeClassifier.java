@@ -81,20 +81,20 @@ public class RandomTreeClassifier {
             readFromFile = new CSVHandler().read(fileName);
             predictingSet = readFromFile;
             predictedSet = readFromFile;
-            if (predictingSet != null  && attributeClassifierModel.size() > 47)
+                if (readFromFile.numInstances() > 0 && attributeClassifierModel.size() > 47)
 
-                for (int n = 0; n < predictingSet.numInstances(); n++) {
-                    for (int i = predictingSet.numAttributes() - numLastItemClassify; i < predictingSet.numAttributes(); i++) {
-                        try {
-                            predictedSet.setClassIndex(i);
-                            predictingSet.setClassIndex(i);
-                            double label = attributeClassifierModel.get(i + numLastItemClassify - predictingSet.numAttributes()).classifyInstance(predictingSet.instance(n));
-                            predictedSet.instance(n).setClassValue(label);
-                        } catch (Exception e) {
-                            e.printStackTrace();
+                    for (int n = 0; n < predictingSet.numInstances(); n++) {
+                        for (int i = predictingSet.numAttributes() - numLastItemClassify; i < predictingSet.numAttributes(); i++) {
+                            try {
+                                predictedSet.setClassIndex(i);
+                                predictingSet.setClassIndex(i);
+                                double label = attributeClassifierModel.get(i + numLastItemClassify - predictingSet.numAttributes()).classifyInstance(predictingSet.instance(n));
+                                predictedSet.instance(n).setClassValue(label);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
                         }
                     }
-                }
 
             System.out.println("TIME Pre Dic ting SET");
             for (int i = 0; i < predictedSet.numInstances(); i++) {

@@ -10,7 +10,8 @@ import java.io.IOException;
 public class CSVHandler {
     private static String writeString = "";
     CSVLoader loader;
-
+//    static String PATH = "D:\\PDPS_res\\";
+    static String PATH = "/home/farbeh/PPD/";
 
     public CSVHandler() {
         loader = new CSVLoader();
@@ -18,14 +19,14 @@ public class CSVHandler {
 
     public Instances read(String fileName) {
         try {
-            loader.setFile(new File(fileName));
+            loader.setFile(new File(PATH + fileName));
             return loader.getDataSet();
         } catch (IOException e) {
             if (e.getMessage().equals("File not found")) {
                 if (fileName.equals("time_test.csv")) {
                     createTimeTestCSV();
                     try {
-                        loader.setFile(new File(fileName));
+                        loader.setFile(new File(PATH + fileName));
                         return loader.getDataSet();
                     } catch (IOException ex) {
                         ex.printStackTrace();
@@ -34,7 +35,7 @@ public class CSVHandler {
                 } else if (fileName.equals("day_test.csv")) {
                     createDayTestCSV();
                     try {
-                        loader.setFile(new File(fileName));
+                        loader.setFile(new File(PATH + fileName));
                         return loader.getDataSet();
                     } catch (IOException ex) {
                         ex.printStackTrace();
@@ -82,12 +83,14 @@ public class CSVHandler {
 
     private static void write(String fileName, String dataIn, boolean append) {
         try {
-            FileWriter fileWriter = new FileWriter(fileName, append);
+            FileWriter fileWriter = new FileWriter(PATH + fileName, append);
             fileWriter.append(dataIn);
             fileWriter.flush();
             fileWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
+            if (e.getMessage().equals(PATH + fileName + " (The system cannot find the path specified)"))
+                new File(PATH).mkdirs();
         }
     }
 

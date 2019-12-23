@@ -36,6 +36,6 @@ public class TableView {
     }
 
     public String report() {
-        return new ReportHandler().read();
+        return ReportHandler.read();
     }
 }

@@ -8,11 +8,13 @@ import java.sql.Timestamp;
 
 public class ReportHandler {
     static String fileName = "report.txt";
+    static String PATH = "/home/farbeh/PPD/";
+//    static String PATH = "D:\\PDPS_res\\";
 
     public static void write(String dataIn) {
 
         try {
-            FileWriter fileWriter = new FileWriter(fileName, true);
+            FileWriter fileWriter = new FileWriter(PATH + fileName, true);
             Timestamp timestamp = new Timestamp(System.currentTimeMillis());
             fileWriter.append(String.valueOf(timestamp)).append(" : ").append(dataIn).append("<br>");
             fileWriter.flush();
@@ -34,7 +36,7 @@ public class ReportHandler {
     public static String read() {
         String data = "";
         try {
-            data = readFileAsString(fileName);
+            data = readFileAsString(PATH + fileName);
         } catch (Exception e) {
             e.printStackTrace();
         }
