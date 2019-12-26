@@ -8,8 +8,8 @@ import java.sql.Timestamp;
 
 public class ReportHandler {
     static String fileName = "report.txt";
-    static String PATH = "/home/farbeh/PPD/";
-//    static String PATH = "D:\\PDPS_res\\";
+//    static String PATH = "/home/farbeh/PPD/";
+    static String PATH = "D:\\PDPS_res\\";
 
     public static void write(String dataIn) {
 

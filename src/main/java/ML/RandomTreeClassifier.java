@@ -48,7 +48,7 @@ public class RandomTreeClassifier {
             readFromFile = new CSVHandler().read(fileName);
             predictingSet = readFromFile;
             predictedSet = readFromFile;
-            if (predictingSet != null && attributeClassifierModel.size() > 0)
+            if (predictingSet.numInstances() > 0 && attributeClassifierModel.size() > 0)
                 for (int n = 0; n < predictingSet.numInstances(); n++) {
                     for (int i = predictingSet.numAttributes() - numLastItemClassify; i < predictingSet.numAttributes(); i++) {
                         try {
@@ -82,7 +82,6 @@ public class RandomTreeClassifier {
             predictingSet = readFromFile;
             predictedSet = readFromFile;
                 if (readFromFile.numInstances() > 0 && attributeClassifierModel.size() > 47)
-
                     for (int n = 0; n < predictingSet.numInstances(); n++) {
                         for (int i = predictingSet.numAttributes() - numLastItemClassify; i < predictingSet.numAttributes(); i++) {
                             try {

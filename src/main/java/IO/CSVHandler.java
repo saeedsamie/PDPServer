@@ -10,11 +10,15 @@ import java.io.IOException;
 public class CSVHandler {
     private static String writeString = "";
     CSVLoader loader;
-//    static String PATH = "D:\\PDPS_res\\";
-    static String PATH = "/home/farbeh/PPD/";
+    static String PATH = "D:\\PDPS_res\\";
+//    static String PATH = "/home/farbeh/PPD/";
 
     public CSVHandler() {
         loader = new CSVLoader();
+    }
+
+    public static void resetWriteString() {
+        writeString = "";
     }
 
     public Instances read(String fileName) {
@@ -25,6 +29,7 @@ public class CSVHandler {
             if (e.getMessage().equals("File not found")) {
                 if (fileName.equals("time_test.csv")) {
                     createTimeTestCSV();
+                    createTimeTrainCSV();
                     try {
                         loader.setFile(new File(PATH + fileName));
                         return loader.getDataSet();
@@ -34,6 +39,7 @@ public class CSVHandler {
 
                 } else if (fileName.equals("day_test.csv")) {
                     createDayTestCSV();
+                    createDayTrainCSV();
                     try {
                         loader.setFile(new File(PATH + fileName));
                         return loader.getDataSet();
@@ -47,7 +53,7 @@ public class CSVHandler {
         return null;
     }
 
-    static public void time_write(String fileName, String dataIn) {
+    public static void time_write(String fileName, String dataIn) {
         writeString += dataIn;
         if (writeString.split(",").length == 57) {
             write(fileName, writeString + "\n", true);
@@ -76,7 +82,7 @@ public class CSVHandler {
                 }
             }
             CSVHandler.write("day_train.csv", "," + presence + "\n", true);
-            writeString = "";
+            resetWriteString();
             ReportHandler.write("Day Added!");
         }
     }
@@ -94,7 +100,7 @@ public class CSVHandler {
         }
     }
 
-    synchronized public static void createTimeTestCSV() {
+    synchronized public static void createDayTestCSV() {
         write("day_test.csv", "Day      ,Tatilness,Class day,Meeting day,Presence\n" +
                 "Saturday ,0        ,TRUE     ,FASLE      ,?\n" +
                 "Sunday   ,0        ,FASLE    ,FASLE      ,?\n" +
@@ -103,7 +109,11 @@ public class CSVHandler {
                 "Wednesday,0        ,FASLE    ,TRUE       ,?\n", false);
     }
 
-    synchronized public static void createDayTestCSV() {
+    synchronized public static void createDayTrainCSV() {
+        write("day_train.csv", "Day      ,Tatilness,Class day,Meeting day,Presence\n", false);
+    }
+
+    synchronized public static void createTimeTestCSV() {
         write("time_test.csv", "Day      ,Tatilness,Class day,Meeting_Day,class_time_1,class_time_2,class_time_3,class_time_4,class_time_5,7,7:15,7:30,7:45,8,8:15,8:30,8:45,9,9:15,9:30,9:45,10,10:15,10:30,10:45,11,11:15,11:30,11:45,12,12:15,12:30,12:45,13,13:15,13:30,13:45,14,14:15,14:30,14:45,15,15:15,15:30,15:45,16,16:15,16:30,16:45,17,17:15,17:30,17:45,18,18:15,18:30,18:45\n" +
                 "Saturday ,0,TRUE     ,FALSE      ,FALSE       ,TRUE        ,FALSE       ,TRUE        ,TRUE        ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n" +
                 "Sunday   ,0,FALSE    ,FALSE      ,FALSE       ,FALSE       ,FALSE       ,FALSE       ,FALSE       ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n" +
@@ -111,5 +121,9 @@ public class CSVHandler {
                 "Tuesday  ,0,FALSE    ,FALSE      ,FALSE       ,FALSE       ,FALSE       ,FALSE       ,FALSE       ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n" +
                 "Wednesday,0,TRUE     ,TRUE       ,FALSE       ,FALSE       ,FALSE       ,FALSE       ,FALSE       ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n", false);
 
+    }
+
+    synchronized public static void createTimeTrainCSV() {
+        write("time_train.csv", "Day      ,Tatilness,Class day,Meeting_Day,class_time_1,class_time_2,class_time_3,class_time_4,class_time_5,7,7:15,7:30,7:45,8,8:15,8:30,8:45,9,9:15,9:30,9:45,10,10:15,10:30,10:45,11,11:15,11:30,11:45,12,12:15,12:30,12:45,13,13:15,13:30,13:45,14,14:15,14:30,14:45,15,15:15,15:30,15:45,16,16:15,16:30,16:45,17,17:15,17:30,17:45,18,18:15,18:30,18:45\n", false);
     }
 }

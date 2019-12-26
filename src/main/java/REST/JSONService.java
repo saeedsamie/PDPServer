@@ -10,6 +10,7 @@ import javax.ws.rs.core.Response;
 
 @Path("/rest")
 public class JSONService {
+
 //    @GET
 //    @Path("/get/time")
 //    @Produces("application/json")
@@ -33,6 +34,7 @@ public class JSONService {
         ReportHandler.write(result);
         System.out.println(result);
         if (jsonData.getStart_time().equals("7")) {
+            CSVHandler.resetWriteString();
             CSVHandler.time_write("time_train.csv", jsonData.getDay());
             switch (jsonData.getDay()) {
                 case "Saturday":
@@ -42,7 +44,7 @@ public class JSONService {
                     CSVHandler.time_write("time_train.csv", ",0,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE");
                     break;
                 case "Monday":
-                    CSVHandler.time_write("time_train.csv", ",0,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE");
+                    CSVHandler.time_write("time_train.csv", ",0,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE");
                     break;
                 case "Tuesday":
                     CSVHandler.time_write("time_train.csv", ",0,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE");

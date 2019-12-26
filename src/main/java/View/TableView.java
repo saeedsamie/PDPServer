@@ -15,8 +15,8 @@ public class TableView {
         timeClassifierModel.train("time_train.csv");
         randomTreeDayClassifier = new RandomTreeClassifier(1);
         randomTreeDayClassifier.train("day_train.csv");
-        CSVHandler.createDayTestCSV();
-        CSVHandler.createTimeTestCSV();
+//        CSVHandler.createDayTestCSV();
+//        CSVHandler.createTimeTestCSV();
     }
 
 //    public NaiveBayesClassifier getTimeClassifierModel() {
